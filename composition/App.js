@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import styles from './global/styles'
 
 function FancyBorder(props) {
 	return (
@@ -12,21 +13,10 @@ function FancyBorder(props) {
 
 export default function App() {
   return (
-    <View style={styles.container}>
-		<Text>Open up App.js to start working on your app!</Text>
-	  
-		<FancyBorder color='green'>
-			<Text style={{color: 'white'}}>Composition Text!</Text>
-		</FancyBorder>
+    <View style={styles.pageStyle}>
+      <FancyBorder color='green'>
+        <Text style={{color: 'white'}}>Composition Text!</Text>
+      </FancyBorder>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
