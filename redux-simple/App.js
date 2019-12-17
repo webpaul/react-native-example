@@ -9,7 +9,10 @@ class AppInner extends React.Component {
     return (
         <View style={styles.container}>
           <Button onPress={this.props.testAction} title="Test!" />
-          <Text>{this.props.testReducer.content || "No current state to display, press button!"} {this.props.testReducer.count} times</Text>
+          <Text>
+            {this.props.testReducer.content || "No current state to display"}
+            {this.props.testReducer.count} times
+          </Text>
         </View>
     );
   }
