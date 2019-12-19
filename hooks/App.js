@@ -1,13 +1,26 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
+function doStuff(myState) {
+  const [obj, setObj] = myState;
+  console.log('hello');
+  
+  //don't do this
+  //obj.x = obj.x+1;
+  //setObj(obj);
+
+  setObj({x: obj.x + 1, y: 4});
+}
+
 export default function App() {
-  const [count, setCount] = useState(0);
+  const myState = useState({ x: 1, y: 2});
+  
+  console.log('render');
 
   return (
     <View style={styles.container}>
-      <Text>Hooks {count}!</Text>
-      <Button title="One more" onPress={() => setCount(count + 1)}></Button>
+      <Text>Hook {myState[0].x}!</Text>
+      <Button title="One more" onPress={doStuff.bind(this, myState)}/>
     </View>
   );
 }
