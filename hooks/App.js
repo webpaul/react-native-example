@@ -20,7 +20,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Hook {myState[0].x}!</Text>
-      <Button title="One more" onPress={doStuff.bind(this, myState)}/>
+      <Button color="green"  title="One more" onPress={doStuff.bind(this, myState)}/>
     </View>
   );
 }

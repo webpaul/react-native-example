@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
 function doThings(props) {
+  debugger;
   console.log(props.navigation);
   props.navigation.navigate('HomeScreen');
 }

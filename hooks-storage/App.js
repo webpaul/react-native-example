@@ -4,6 +4,8 @@ import { AsyncStorage, StyleSheet, Text, View, Button } from 'react-native';
 export default function App() {
   const [count, setCount] = useState(0);
 
+  console.log("Count from hook: " + count);
+  
   AsyncStorage.getItem('count').then((value) => {
     if(!count)
       console.log("Initializing count from storage: " + value);
