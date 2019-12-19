@@ -17,6 +17,17 @@ export default class LoginScreen extends React.Component {
   }
 }
 
+// const payload = {
+//   message: text
+// };
+// fetch(`${pusherConfig.restServer}/users/${this.props.name}/messages`, {
+// method: 'POST',
+// headers: {
+//   'Content-Type': 'application/json'
+// },
+// body: JSON.stringify(payload)
+// });
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
